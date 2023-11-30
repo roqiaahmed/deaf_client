@@ -6,7 +6,8 @@ import { toast } from "react-hot-toast"
 import { useRouter } from 'next/navigation';
 
 export default function ShoppingBag() {
-  const [bags, setBags] = useState<Bag>(JSON.parse(localStorage.getItem('ShoppingBag') || '{}'));
+  const [bags, setBags] = useState<Bag>({});
+  const [init, setInit] = useState(false);
   const router = useRouter()
 
   const Up = (productId: string) => {
@@ -38,8 +39,15 @@ export default function ShoppingBag() {
   }
 
   useEffect(() => {
-    localStorage.setItem('ShoppingBag', JSON.stringify(bags));
-  }, [bags]);
+    setBags(JSON.parse(localStorage.getItem('ShoppingBag') || '{}'));
+    setInit(true);
+  }, []);
+
+  useEffect(() => {
+    if (init){
+      localStorage.setItem('ShoppingBag', JSON.stringify(bags));
+    }
+  }, [init, bags]);
   
   return (
     <div>

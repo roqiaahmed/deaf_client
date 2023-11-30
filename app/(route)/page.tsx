@@ -13,4 +13,5 @@ const Home = () => {
     {redirectToBillboard()
   }</div>;
 };
+
 export default Home;

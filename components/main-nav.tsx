@@ -9,7 +9,7 @@ import { ShoppingBag } from "lucide-react"
 
 interface MainNavProps {
   data: Billboard[];
-    className :React.HTMLAttributes<HTMLElement>
+  className: string
 }
 
 const MainNav: React.FC<MainNavProps> = ({

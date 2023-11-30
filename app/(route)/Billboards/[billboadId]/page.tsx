@@ -1,13 +1,11 @@
-//  "use client";
-import React from 'react'
 import  getBillboard  from '@/actions/get-billboard'
 import Image from 'next/image';
 import getCategories from '@/actions/get-categories';
 
-import CategoryPage from './Categories/[categoryId]/page';
+import CategoryPage from './Categories/[categoryId]/CategoryPage';
 import { Category } from '@/types';
 
- const page = async (
+ const Page = async (
   {params}:{params:{billboadId:string}}
  ) => {
 
@@ -22,7 +20,7 @@ import { Category } from '@/types';
         categories.push(category)
       }
     })
-    // console.log("categories=======================================================>",categories);
+    console.log("categories=======================================================>",categories);
     console.log("params",billboad);
     
   return (
@@ -33,4 +31,4 @@ import { Category } from '@/types';
     </div>
   )
 }
-export default page
+export default Page
