@@ -135,8 +135,8 @@ export default function Bill() {
       <form 
       className='border-t-[3px] border-[#dcc8bfb9]' 
       onSubmit={handleSubmit}>
-        <div className='grid grid-cols-3  sm:grid-cols-1 text-center mt-5' >
-          <div className='sm:mb-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-3  sm:grid-cols-1 text-center mt-5' >
+          <div className='mb-8 sm:mb-8'>
             {errors.name && <p className='text-red-500'>{errors.name}</p>}
             <label htmlFor='name'>Name:</label>
             <input
@@ -148,7 +148,7 @@ export default function Bill() {
             />
           </div>
 
-          <div className='sm:mb-8'>
+          <div className='mb-8 sm:mb-8'>
             {errors.phone && <p className='text-red-500'>{errors.phone}</p>}
             <label htmlFor='phone'>Phone:</label>
             <input
@@ -159,7 +159,7 @@ export default function Bill() {
             />
           </div>
 
-          <div className='sm:mb-8'>
+          <div className='mb-8 sm:mb-8'>
             {errors.address && <p className='text-red-500'>{errors.address}</p>}
             <label htmlFor='address'>Address:</label>
             <textarea

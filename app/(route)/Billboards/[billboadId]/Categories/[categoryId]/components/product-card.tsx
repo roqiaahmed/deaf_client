@@ -25,7 +25,7 @@ const Productcard: React.FC<Props> = (
   }, [bag]);
 
   return (
-    <div className='grid grid-cols-4 md:grid-cols-2 sm:grid-cols-2 container bg-[#ffffff59] border-2 border-[#dcc8bfb9] '>
+    <div className='grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 container bg-[#ffffff59] border-2 border-[#dcc8bfb9] '>
     {Array.isArray(products) &&
       products.map((product) =>
         product.categoryId === categoryId ? (
