@@ -52,7 +52,7 @@ export default function ShoppingBag() {
   return (
     <div>
       <h1>Shopping Bag</h1>
-      <div className='grid grid-cols-4 container bg-[#ffffff59] border-2 border-[#dcc8bfb9]'>
+      <div className='grid grid-cols-4 md:grid-cols-2 sm:grid-cols-2 container bg-[#ffffff59] border-2 border-[#dcc8bfb9]'>
         {Object.entries(bags).map(([key, value]) => (
           <div 
           key={key}
