@@ -4,7 +4,6 @@ import React from 'react'
 import { useState, useEffect, useMemo } from 'react';
 import createOrder from '@/actions/create-order';
 import { toast } from "react-hot-toast"
-import { useRouter } from 'next/router';
 
 interface FormData {
   name: string;
@@ -20,7 +19,6 @@ export default function Bill() {
     return {};
   }, []);
 
-  const router = useRouter();
   const [total, setTotal] = useState(0)
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -105,7 +103,6 @@ export default function Bill() {
     }else{
       toast.error("Please fill in all the fields")
     }
-    router.push('/')
     // Reset the form fields if needed
     setFormData({
       name: '',
