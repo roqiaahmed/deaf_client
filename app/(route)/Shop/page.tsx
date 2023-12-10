@@ -52,11 +52,11 @@ export default function ShoppingBag() {
   return (
     <div>
       <h1>Shopping Bag</h1>
-      <div className='grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 container bg-[#ffffff59] border-2 border-[#dcc8bfb9]'>
+      <div className='grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 b-[2px] container bg-[#ffffff59] border-2 border-[#dcc8bfb9]'>
         {Object.entries(bags).map(([key, value]) => (
           <div 
           key={key}
-          className='m-4 text-[#54551ce0] font-bold border-2 border-[#d0bcb3b9] bg-[#fff] my-4'
+          className='m-0 md:m-4 lg:m-4 text-[#54551ce0] font-bold border-2 border-[#d0bcb3b9] bg-[#fff] my-4'
           >
           <button  onClick={()=> Delete(key)}
           className='absolute text-[#696a3a] p-4 hover:text-[#999]'
