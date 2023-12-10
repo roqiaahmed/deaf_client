@@ -25,12 +25,12 @@ const Productcard: React.FC<Props> = (
   }, [bag]);
 
   return (
-    <div className='grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 container bg-[#ffffff59] border-2 border-[#dcc8bfb9] '>
+    <div className='grid grid-cols-2 p-[2px] md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 container bg-[#ffffff59] border-2 border-[#dcc8bfb9] '>
     {Array.isArray(products) &&
       products.map((product) =>
         product.categoryId === categoryId ? (
           <div  key={product.id} 
-                className='m-4 text-[#54551ce0] font-bold border-2 border-[#d0bcb3b9] bg-[#fff] my-4'>
+                className='m-0 md:m-4 lg:m-4 text-[#54551ce0] font-bold border-2 border-[#d0bcb3b9] bg-[#fff] my-4'>
             <Image 
             className='w-[100%] h-[230px] mx-auto'
             src={product.urlImage} 
