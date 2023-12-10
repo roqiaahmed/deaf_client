@@ -1,6 +1,6 @@
 import { Category } from "@/types"
 
-const URL = `${process.env.NEXT_PUBLIC_API_URL}/user_2YJU53RqkEMFZYjicKavT8jBaNz/categories`
+const URL = `${process.env.NEXT_PUBLIC_API_URL}/categories`
 
 
 const getCategories = async () : Promise<Category[]> => {
